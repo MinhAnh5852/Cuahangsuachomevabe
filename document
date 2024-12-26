@@ -1,12 +1,1 @@
-document.getElementById('milkForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Ngăn chặn hành động gửi form mặc định
 
-    // Lấy dữ liệu từ form
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const product = document.getElementById('product').value;
-
-    // Hiển thị kết quả
-    const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = `Cảm ơn ${name}! Bạn đã chọn sản phẩm: ${product}. Chúng tôi sẽ gửi thông tin đến ${email}.`;
-});
