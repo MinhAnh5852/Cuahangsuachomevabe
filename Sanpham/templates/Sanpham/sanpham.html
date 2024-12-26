@@ -12,6 +12,26 @@
             margin: 0;
             padding: 20px;
         }
+        .navbar {
+            background-color: #3b972e;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #f40707;
+        }
         .container {
             max-width: 900px;
             margin: auto;
@@ -97,10 +117,22 @@
 </head>
 <body>
 
+<div class="navbar">
+    <div>
+        <a href="#">Đăng Nhập</a>
+    </div>
+    <div>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Sản Phẩm</a>
+        <a href="#">Giới Thiệu</a>
+        <a href="#">Liên Hệ</a>
+    </div>
+</div>
+
 <div class="container">
     <h1>Sản phẩm Sữa cho Mẹ Bầu và Bé</h1>
     <div class="product">
-        <img src="https://www.acfc.com.vn/wp/wp-content/uploads/2022/06/top-10-loai-sua-cho-ba-bau-tot-nhat-hien-nay-6.jpg" alt="Sữa cho Mẹ Bầu và Bé">
+        <img src="https://cdn-v2.kidsplaza.vn/media/catalog/product/s/u/sua-bau-similac-mom-iq-plus-hop-900g-huong-vani-1.jpg" alt="Sữa cho Mẹ Bầu và Bé">
         <div class="product-info">
             <h2>Sữa Bầu Dinh Dưỡng</h2>
             <p>Được thiết kế đặc biệt cho mẹ bầu, cung cấp đầy đủ vitamin và khoáng chất cần thiết cho sự phát triển của thai nhi.</p>

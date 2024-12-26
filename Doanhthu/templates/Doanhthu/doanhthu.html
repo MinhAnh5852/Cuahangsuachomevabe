@@ -5,21 +5,22 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Doanh Thu Sữa Cho Mẹ Bầu Và Bé</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
         /* Tùy chỉnh màu sắc */
         .header-bg {
-            background-color:rgb(36, 143, 52); /* Màu nền cho header */
+            background-color: rgb(43, 169, 62); /* Màu nền cho header */
         }
         .footer-bg {
-            background-color:rgb(10, 144, 30); /* Màu nền cho footer */
+            background-color: rgb(22, 185, 47); /* Màu nền cho footer */
         }
         .card-bg {
-            background-color:rgb(205, 241, 206); /* Màu nền cho các thẻ sản phẩm */
+            background-color: rgb(213, 239, 214); /* Màu nền cho các thẻ sản phẩm */
         }
         .section-bg {
-            background-color:rgb(252, 252, 252); /* Màu nền cho các phần nội dung */
+            background-color: rgb(252, 252, 252); /* Màu nền cho các phần nội dung */
         }
     </style>
 </head>
@@ -58,7 +59,7 @@
     <section class="section-bg p-6 rounded-lg shadow-lg">
         <h2 class="text-xl font-bold mb-4">Biểu Đồ Doanh Thu</h2>
         <div class="flex justify-center">
-            <img alt="Biểu đồ doanh thu của các loại sữa cho mẹ bầu và bé trong tháng 10, hiển thị các mức doanh thu khác nhau cho từng loại sữa." class="rounded-lg shadow-md" height="400" src="https://storage.googleapis.com/a1aa/image/Nfbd1wm9P6RgcyUdYnfoWf6Rf17CRagGOmumcfkhEPpa12vfE.jpg" width="600"/>
+            <canvas id="revenueChart" class="rounded-lg shadow-md" width="600" height="400"></canvas>
         </div>
     </section>
 </main>
@@ -67,5 +68,37 @@
         <p>© 2023 Doanh Thu Sữa Cho Mẹ Bầu Và Bé. All rights reserved.</p>
     </div>
 </footer>
+
+<script>
+    const ctx = document.getElementById('revenueChart').getContext('2d');
+    const revenueChart = new Chart(ctx, {
+        type : 'bar',
+        data: {
+            labels: ['Sữa Bầu Dinh Dưỡng', 'Sữa Công Thức cho Bé', 'Sữa Lốc cho Bé'],
+            datasets: [{
+                label: 'Doanh thu (VND)',
+                data: [50000000, 30000000, 80000000],
+                backgroundColor: [
+                    'rgba(75, 192, 192, 0.6)',
+                    'rgba(153, 102, 255, 0.6)',
+                    'rgba(255, 159, 64, 0.6)'
+                ],
+                borderColor: [
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
 </body>
 </html>
