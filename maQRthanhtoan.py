@@ -1,6 +1,6 @@
 import qrcode
-from pyzbar import pyzbar
-from PIL import Image
+from pyzbar import pyzbar #pyzbar doc du lieu tu ma qr
+from PIL import Image #pillow xu ly hinh anh
 #tao ma qr
 #thong tin thanh toan
 payment_info = """
@@ -14,7 +14,7 @@ qr.add_data(payment_info)
 qr.make(fit=True)
 
 # chinh mau sac qr
-img = qr.make_image(fill_color='blue', back_color='yellow')
+img = qr.make_image(fill='black', back_color='white')
 img.save("store_payment_qr_colored.png")
 print("Mã QR đã được tạo và lưu với tên 'store_payment_qr_colored.png'")
 
