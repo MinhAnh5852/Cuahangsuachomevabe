@@ -1,29 +1,216 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <h1>Chi tiết đơn hàng</h1>
-        <p>Order ID: {{ order.id }}</p>
-        <p>Ngày tạo: {{ order.created_at }}</p>
-        <p>Trạng thái: {{ order.status }}</p>
-        <h2>Sản phẩm:</h2>
-        <ul>
-    {% for item in order.items.all %}
-    <li>{{ item.product.name }} - Số lượng: {{ item.quantity }}</li>
-    {% endfor %}
-    </ul>
-        
-        <script src="" async defer></script>
-    </body>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Cửa hàng Sữa</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:rgb(255, 254, 254);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+        h2 {
+            color:rgb(6, 6, 6);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color:rgb(226, 248, 248);
+            color: black;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        form {
+            margin-top: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color:rgb(109, 147, 213);
+            color: white;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e32020;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quản lý Cửa hàng Sữa cho Mẹ Bầu và Em Bé</h1>
+        <nav>
+            <ul>
+                <li><a href="#orders">Đơn hàng</a></li>
+                <li><a href="#products">Hàng hóa</a></li>
+                <li><a href="#users">Người dùng</a></li>
+                <li><a href="#vouchers">Mã Voucher</a></li>
+                <li><a href="#reports">Báo cáo</a></li>
+                <li><a href="#tracking">Theo dõi đơn hàng</a></li>
+                <li><a href="#posts">Bài viết</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="orders">
+            <h2>Xác nhận Đơn hàng</h2>
+            <p>Danh sách đơn hàng cần xác nhận:</p>
+            <table>
+                <tr>
+                    <th>Mã Đơn hàng</th>
+                    <th>Tên Khách hàng</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+                <!-- Dữ liệu đơn hàng sẽ được thêm vào đây -->
+            </table>
+        </section>
+
+        <section id="products">
+            <h2>Quản lý Hàng hóa</h2>
+            <p>Danh sách hàng hóa:</p>
+            <table>
+                <tr>
+                    <th>Mã Sản phẩm</th>
+                    <th>Tên Sản phẩm</th>
+                    <th>Số lượng</th <th>Giá</th>
+                    <th>Hành động</th>
+                </tr>
+                <!-- Dữ liệu hàng hóa sẽ được thêm vào đây -->
+            </table>
+        </section>
+
+        <section id="users">
+            <h2>Quản lý Người dùng</h2>
+            <p>Danh sách người dùng:</p>
+            <table>
+                <tr>
+                    <th>ID Người dùng</th>
+                    <th>Tên</th>
+                    <th>Email</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+                <!-- Dữ liệu người dùng sẽ được thêm vào đây -->
+            </table>
+        </section>
+
+        <section id="vouchers">
+            <h2>Tạo Mã Voucher</h2>
+            <form>
+                <label for="voucherCode">Mã Voucher:</label>
+                <input type="text" id="voucherCode" name="voucherCode" required>
+                <label for="discount">Giảm giá (%):</label>
+                <input type="number" id="discount" name="discount" required>
+                <button type="submit">Tạo Voucher</button>
+            </form>
+        </section>
+
+        <section id="reports">
+            <h2>Xử lý Báo cáo</h2>
+            <p>Danh sách báo cáo:</p>
+            <table>
+                <tr>
+                    <th>Mã Báo cáo</th>
+                    <th>Nội dung</th>
+                    <th>Trạng thái</th>
+                    <th>Hành động</th>
+                </tr>
+                <!-- Dữ liệu báo cáo sẽ được thêm vào đây -->
+            </table>
+        </section>
+
+        <section id="tracking">
+            <h2>Theo dõi Đơn hàng</h2>
+            <form>
+                <label for="orderId">Mã Đơn hàng:</label>
+                <input type="text" id="orderId" name="orderId" required>
+                <button type="submit">Theo dõi</button>
+            </form>
+        </section>
+
+        <section id="posts">
+            <h2>Quản lý Bài viết</h2>
+            <p>Danh sách bài viết:</p>
+            <table>
+                <tr>
+                    <th>ID Bài viết</th>
+                    <th>Tiêu đề</th>
+                    <th>Ngày đăng</th>
+                    <th>Hành động</th>
+                </tr>
+                <!-- Dữ liệu bài viết sẽ được thêm vào đây -->
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Cửa hàng Sữa cho Mẹ Bầu và Em Bé. Tất cả quyền được bảo lưu.</p>
+    </footer>
+</body>
 </html>
