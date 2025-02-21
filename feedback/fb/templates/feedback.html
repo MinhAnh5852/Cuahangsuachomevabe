@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Phản Hồi</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Thay đổi hướng để có header và nội dung */
+            justify-content: flex-start; /* Căn trên theo chiều dọc */
+            align-items: center; /* Căn giữa theo chiều ngang */
+            height: 100vh; /* Chiều cao toàn bộ màn hình */
+            margin: 0;
+            font-family: 'Times New Roman', sans-serif; /* Thêm font chữ */
+        }
+
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            text-align: center;
+            margin-bottom: 20px; /* Khoảng cách giữa header và phần phản hồi */
+            padding: 10px; /* Thêm khoảng cách bên trong header */
+            border-radius: 10px; /* Bo góc cho header */
+            width: 100%; /* Đặt chiều rộng cho header */
+        }
+
+        nav {
+            margin: 10px 0; /* Khoảng cách cho nav */
+        }
+
+        nav ul {
+            list-style-type: none; /* Bỏ dấu chấm cho danh sách */
+            padding: 0; /* Bỏ padding */
+        }
+
+        nav ul li {
+            display: inline; /* Hiển thị các mục trong cùng một hàng */
+            margin: 0 15px; /* Khoảng cách giữa các mục */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Bỏ gạch chân cho liên kết */
+            color: #333; /* Màu chữ cho liên kết */
+        }
+
+        #feedback {
+            text-align: center;
+            width: 90%; /* Đặt chiều rộng cho phần phản hồi */
+            max-width: 600px; /* Giới hạn chiều rộng tối đa */
+            padding: 20px; /* Thêm khoảng cách bên trong */
+            border: 1px solid #87e294; /* Thêm viền cho phần phản hồi */
+            border-radius: 10px; /* Bo góc cho phần phản hồi */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng cho phần phản hồi */
+            background-color: #a7f7d1; /* Màu nền cho phần phản hồi */
+            flex-grow: 1; /* Cho phép phần phản hồi chiếm không gian còn lại */
+            display: flex;
+            flex-direction: column; /* Sắp xếp các phần tử theo cột */
+            justify-content: center; /* Căn giữa theo chiều dọc */
+            align-items: stretch; /* Căn đều các phần tử */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; /* Sắp xếp các phần tử theo cột */
+            align-items: stretch; /* Căn đều các phần tử trong form */
+            gap: 15px; /* Khoảng cách giữa các phần tử trong form */
+        }
+
+        label {
+            margin-bottom: 5px; /* Khoảng cách giữa label và input */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%; /* Đặt chiều rộng cho các ô nhập */
+            padding: 10px; /* Thêm khoảng cách bên trong */
+            border: 1px solid #fa6e6e; /* Viền cho các ô nhập */
+            border-radius: 5px; /* Bo góc cho các ô nhập */
+            box-sizing: border-box; /* Đảm bảo padding không làm tăng chiều rộng */
+        }
+
+        button[type="submit"] {
+            background-color: #72c9f1; /* Màu nền nút */
+            color: rgb(20, 20, 20); /* Màu chữ */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px; /* Bo góc cho nút */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #94bcf8; /* Màu nền khi hover */
+        }
+
+        button[type="submit"]:active {
+            background-color : #8a88fc; /* Màu nền khi click */
+        }
+
+        .star {
+            color: rgb(243, 217, 69); /* Màu vàng cho sao */
+            font-size: 24px; /* Kích thước sao */
+            cursor: pointer; /* Con trỏ khi hover */
+        }
+
+        .star:hover {
+            color: orange; /* Màu khi hover vào sao */
+        }
+
+        
+        #reviews {
+            text-align: center;
+            width: 90%;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #87e294;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .review {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trang Gửi Phản Hồi</h1>
+        <nav>
+            <ul>
+                <li><a href="khachhang.html">🏠 Trang Chủ</a></li>
+                <li><a href="donhang.html">Đơn Hàng</a></li>
+                <li><a href="hanghoa.html">Hàng Hóa</a></li>
+                <li><a href="nguoidung.html">Người Dùng</a></li>
+                <li><a href="mavoucher.html">Mã Voucher </a></li>
+                <li><a href="baocao.html">Báo Cáo</a></li>
+                <li><a href="theodoidonhang.html">Theo dõi đơn hàng</a></li>
+                <li><a href="baiviet.html">Bài viết</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="feedback">
+        <h2>Gửi Phản Hồi</h2>
+        <div class="button-container">
+        </div>
+        <form action="http://localhost:5000/feedback" method="POST" enctype="multipart/form-data" onsubmit="return redirectToThankYouPage()">
+            <div>
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="product">Sản Phẩm:</label>
+                <select id="product" name="product" required>
+                    <option value="">Chọn sản phẩm</option>
+                    <option value="sua_cong_thuc_me_bau">Sữa Công Thức Cho Mẹ Bầu</option>
+                    <option value="sua_loc_me_bau">Sữa Lốc Dành Cho Mẹ Bầu</option>
+                    <option value="sua_goi_me_bau">Sữa Gói Dành Cho Mẹ Bầu</option>
+                    <option value="sua_loc_be">Sữa Lốc 4 Hộp Dành Cho Bé</option>
+                    <option value="sua_cong_thuc_be">Sữa Công Thức Dành Cho Bé</option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Đánh Giá:</label>
+                <div id="star-rating">
+                    <input type="radio" id="star1" name="rating" value="5" required>
+                    <label for="star1" class="star" onclick="setRating(5)">★</label>
+                    
+                    <input type="radio" id="star2" name="rating" value="4">
+                    <label for="star2" class="star" onclick="setRating(4)">★</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" class="star" onclick="setRating(3)">★</label>
+                    
+                    <input type="radio" id="star4" name="rating" value="2">
+                    <label for="star4" class="star" onclick="setRating(2)">★</label>
+                    
+                    <input type="radio" id="star5" name="rating" value="1">
+                    <label for=" star5" class="star" onclick="setRating(1)">★</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="comments">Nhận Xét:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Viết nhận xét của bạn ở đây..." required></textarea>
+            </div>
+            
+            <div>
+                <label for="peerPhoto">Tải lên hình ảnh từ bạn:</label>
+                <input type="file" id="peerPhoto" name="peerPhoto" accept="image/*" required>
+            </div>
+            
+            <div>
+                <label for="peerVideo">Tải lên video từ bạn:</label>
+                <input type="file" id="peerVideo" name="peerVideo" accept="video/*">
+            </div>
+            
+            <button type="submit">Gửi Phản Hồi</button>
+
+        </form>
+    </section>
+    <footer>
+        <p>&copy; Cửa Hàng Mẹ Bầu Và Bé. Tất cả quyền được bảo lưu.</p>
+        <p><a href="privacy.html">Chính Sách Bảo Mật</a> | <a href="contact.html">Liên Hệ</a></p>
+    </footer>
+    
+    <style>
+        #reviews {
+            text-align: center;
+            width: 100%;
+            margin: 20px auto;
+            padding: 20px; 
+            border: 1x solid #87e294;
+            border-radius: 10px;
+            background-color: #b9eea4;
+        }
+    
+        .review {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+    
+        .review h3 {
+            margin: 0 0 10px; /* Khoảng cách dưới tiêu đề */
+        }
+    
+        .review p {
+            margin: 5px 0; /* Khoảng cách giữa các đoạn văn */
+        }
+    
+        .review img {
+            max-width: 100%; /* Đảm bảo hình ảnh không vượt quá chiều rộng của khung */
+            height: auto; /* Giữ tỷ lệ hình ảnh */
+            border-radius: 5px; /* Bo góc cho hình ảnh */
+        }
+    
+        .review video {
+            max-width: 100%; /* Đảm bảo video không vượt quá chiều rộng của khung */
+            height: auto; /* Giữ tỷ lệ video */
+            border-radius: 5px; /* Bo góc cho video */
+        }
+        footer {
+            text-align: center;
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163),#63fcff);
+            color: #000000;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px; /* Tăng kích thước chữ cho footer */
+        }
+    </style>
+    <script>
+        function redirectToThankYouPage() {
+            // Chuyển hướng đến trang cảm ơn
+            window.location.href = 'thankyou.html';
+            return false; // Ngăn chặn hành động gửi form mặc định
+        }
+    </script>
+</body>
+</html>
