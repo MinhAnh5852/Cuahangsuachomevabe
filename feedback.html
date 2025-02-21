@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Gửi Phản Hồi</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Thay đổi hướng để có header và nội dung */
+            justify-content: center; /* Căn giữa theo chiều dọc */
+            align-items: center; /* Căn giữa theo chiều ngang */
+            height: 100vh; /* Chiều cao toàn bộ màn hình */
+            margin: 0;
+            font-family: 'Times New Roman', sans-serif; /* Thêm font chữ */
+        }
+
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            text-align: center;
+            margin-bottom: 20px; /* Khoảng cách giữa header và phần phản hồi */
+            padding: 10px; /* Thêm khoảng cách bên trong header */
+            border-radius: 10px; /* Bo góc cho header */
+        }
+
+        #feedback {
+            text-align: center;
+            width: 90%; /* Đặt chiều rộng cho phần phản hồi */
+            max-width: 600px; /* Giới hạn chiều rộng tối đa */
+            padding: 20px; /* Thêm khoảng cách bên trong */
+            border: 1px solid #87e294; /* Thêm viền cho phần phản hồi */
+            border-radius: 10px; /* Bo góc cho phần phản hồi */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng cho phần phản hồi */
+            background-color: #f9f9f9; /* Màu nền cho phần phản hồi */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column; /* Sắp xếp các phần tử theo cột */
+            align-items: center; /* Căn giữa các phần tử trong form */
+            gap: 15px; /* Khoảng cách giữa các phần tử trong form */
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50; /* Màu nền nút */
+            color: rgb(66, 58, 58); /* Màu chữ */
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px; /* Bo góc cho nút */
+        }
+        .nav-button {
+            background-color: #89ece4; /* Màu nền cho nút quay lại */
+            color: rgb(82, 39, 39); /* Màu chữ */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px; /* Bo góc cho nút */
+            font-size: 16px; /* Kích thước chữ */
+            margin-bottom: 20px; /* Khoảng cách dưới nút */
+            align-self: left; /* Căn trái cho nút */
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049; /* Màu nền khi hover */
+        }
+
+        button[type="submit"]:active {
+            background-color: #3e8e41; /* Màu nền khi click */
+        }
+
+        .star {
+            color: gold; /* Màu vàng cho sao */
+            font-size: 24px; /* Kích thước sao */
+            cursor: pointer; /* Con trỏ khi hover */
+        }
+
+        .star:hover {
+            color: orange; /* Màu khi hover vào sao */
+        }
+
+        footer {
+            margin-top: 20px; /* Khoảng cách giữa form và footer */
+            text-align: center; /* Căn giữa nội dung footer */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Trang Gửi Phản Hồi</h1>
+        <nav>
+            <ul>
+                <li><a href="khachhang.html">🏠</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="feedback">
+        <h2>Gửi Phản Hồi</h2>
+        <div class="button-container">
+            <button class="nav-button" onclick="window.history.back()">&lt;</button>
+        </div>
+
+        <form action="http://localhost:5000/feedback" method="POST" enctype="multipart/form-data" onsubmit="return redirectToThankYouPage()">
+            <div>
+                <label for="name">Tên:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="product">Sản Phẩm:</label>
+                <select id="product" name="product" required>
+                    <option value="">Chọn sản phẩm</option>
+                    <option value="sua_cong_thuc_me_bau">Sữa Công Thức Cho Mẹ Bầu</option>
+                    <option value="sua_loc_me_bau">Sữa Lốc Dành Cho Mẹ Bầu</option>
+                    <option value="sua_goi_me_bau">Sữa Gói Dành Cho Mẹ Bầu</option>
+                    <option value="sua_loc_be">Sữa Lốc 4 Hộp Dành Cho Bé</option>
+                    <option value="sua_cong_thuc_be">Sữa Công Thức Dành Cho Bé</option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Đánh Giá:</label>
+                <div id="star-rating">
+                    <input type="radio" id="star1" name="rating" value="5" required>
+                    <label for="star1" class="star" onclick="setRating(5)">★</label>
+                    
+                    <input type="radio" id="star2" name="rating" value="4">
+                    <label for="star2" class="star" onclick="setRating(4)">★</label>
+                    
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3" class="star" onclick="setRating(3)">★</label>
+                    
+                    <input type="radio" id="star4" name="rating" value="2">
+                    <label for="star4" class="star" onclick="setRating(2)">★</label>
+                    
+                    <input type="radio" id="star5" name="rating" value="1">
+                    <label for="star5" class="star" onclick="setRating(1)">★</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="comments">Nhận Xét:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Viết nhận xét của bạn ở đây..." required></textarea>
+            </div>
+            
+            <div>
+                <label for="peerPhoto">Tải lên hình ảnh từ bạn:</label>
+                <input type="file" id="peerPhoto" name="peerPhoto" accept="image/*" required>
+            </div>
+            
+            <div>
+                <label for="peerVideo">Tải lên video từ bạn:</label>
+                <input type="file" id="peerVideo" name="peerVideo" accept="video/*">
+            </div>
+            
+            <button type="submit">Gửi Phản Hồi</button>
+        </form>
+        <footer>
+            <p>&copy; 2025 Công Ty XYZ. Tất cả quyền được bảo lưu.</p>
+            <p><a href="privacy.html">Chính Sách Bảo Mật</a> | <a href="contact.html">Liên Hệ</a></p>
+        </footer>
+    </section>
+</body>
+</html>
