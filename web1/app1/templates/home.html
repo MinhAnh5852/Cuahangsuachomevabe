@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tư Vấn Chọn Mua Sữa Online</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163),#63fcff);
+            color: black;
+            padding: 20px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        h2 {
+            color:rgb(16, 29, 29); /* Màu xanh lá pastel */
+            text-align: center;
+            margin: 20px 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 95%;
+            padding: 10px;
+            border: 1px solid #5eaaa8; /* Màu xanh lá pastel */
+            border-radius: 5px;
+        }
+        .form-group button {
+            background-color:rgb(95, 174, 172); /* Màu xanh lá pastel */
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background-color:rgb(250, 25, 25); /* Màu xanh lá đậm hơn khi hover */
+        }
+        .chat-section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solidrgb(51, 74, 167); /* Màu xanh lá pastel */
+            border-radius: 5px;
+            background-color:rgb(198, 235, 238);
+            color: black;
+        }
+        .chat-section h3 {
+            text-align: center;
+            color:rgb(13, 10, 33); /* Màu xanh lá pastel */
+        }
+        .chat-box {
+            border: 1px solid #5eaaa8; /* Màu xanh lá pastel */
+            border-radius: 5px;
+            height: 200px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .chat-input {
+            display: flex;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solidrgb(17, 28, 28); /* Màu xanh lá pastel */
+            border-radius: 5px;
+            margin-right: 5px;
+            color: black;
+        }
+        .chat-input button {
+            background-color: #5eaaa8; /* Màu xanh lá pastel */
+            color: black;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .chat-input button:hover {
+            background-color:rgb(244, 19, 19); /* Màu xanh lá đậm hơn khi hover */
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163),#63fcff);
+            color: black; /* Đã thay đổi màu chữ thành đen */
+            border-radius: 0 0 8px 8px;
+        }
+        .brand-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .brand-item {
+            margin: 10px;
+            text-align: center;
+        }
+        .brand-item img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Đăng Ký Tư Vấn Chọn Mua Sữa Online</h1>
+    </header>
+
+    <h2>Thông Tin Khách Hàng</h2>
+    <form id="registration-form">
+        <div class="form-group">
+            <label for="name">Họ và Tên:</label>
+            <input type="text" id="name" placeholder="Nhập họ và tên" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Nhập email" required>
+        </div>
+        <div class="form-group">
+            <label for="baby-age">Độ tuổi của bé:</label>
+            <select id="baby-age" required>
+                <option value="">Chọn độ tuổi</option>
+                <option value="0-6 tháng">0-6 tháng</option>
+                <option value="6-12 tháng">6-12 tháng</option>
+                <option value="1-3 tuổi">1-3 tuổi</option>
+                <option value="3-5 tuổi">3-5 tuổi</option>
+                <option value="trên 5 tuổi">Trên 5 tuổi</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="milk-type">Loại sữa cần mua:</label>
+            <select id="milk-type" required>
+                <option value="">Chọn loại sữa</option>
+                <option value="sữa bột">Sữa Bột</option>
+                <option value="sữa tươi">Sữa Tươi</option>
+                <option value="sữa công thức">Sữa Công Thức</option>
+                <option value="sữa đặc">Sữa Đặc</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit">Đăng Ký</button>
+        </div>
+    </form>
+
+    <div class="chat-section">
+        <h3>Chat Tư Vấn</h3>
+        <div class="chat-box" id="chat-box">
+            <p><strong>Chuyên viên:</strong> Chào bạn! Bạn cần tư vấn gì về sản phẩm sữa?</p>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chat-input" placeholder="Nhập tin nhắn của bạn..." required>
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+    </div>
+
+    <section id="brands">
+        <h2>Danh Sách Thương Hiệu Sữa Nổi Tiếng</h2>
+        <div class="brand-list">
+            <div class="brand-item">
+                <img src="https://www.vn.abbott/etc.clientlibs/abbott-platform/clientlibs/clientlib-site/resources/images/abbott-logo.png" alt="Abbott">
+                <p>Abbott (Similac, Ensure)</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://www.moby.com.vn/data/ck/images/logo%20meiji.jpg" alt="Meiji">
+                <p>Meiji</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://cdn.shopify.com/s/files/1/0569/0877/5471/files/Logo_Moi_Khong_Gold_no_flag_Blue-01_01c16a22-1e66-449d-bdde-b6cae36d833e.png?v=1675732933" alt="Friso">
+                <p>Friso</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/6/65/Dumex-logo.png/revision/latest?cb=20180603183856" alt="Dumex">
+                <p>Dumex</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://www.nestle.com.vn/sites/g/files/pydnoa216/files/NESTLElogo-with-wordmark-oak-781x800px-RGB.png" alt="Nestlé">
+                <p>Nestlé (Nan, Lactogen)</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://upload.wikimedia.org/wikipedia/vi/0/06/Vinamilk_logo.jpg" alt="Vinamilk">
+                <p>Vinamilk</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://www.moby.com.vn/data/ck/images/nutifood.png" alt="Nutifood">
+                <p>Nutifood</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cửa Hàng Sữa Cho Mẹ Bầu Và Bé. Tất cả quyền được bảo lưu.</p>
+        <p>HOTLINE Chăm sóc khách hàng: <strong>0123 456 789</strong></p>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Cảm ơn bạn đã đăng ký tư vấn!');
+        this.reset();
+    });
+
+    function sendMessage() {
+        const input = document.getElementById('chat-input');
+        const message = input.value.trim();
+        if (message) {
+            const chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<p><strong>Bạn:</strong> ${message}</p>`;
+            input.value = '';
+            chatBox.scrollTop = chatBox.scrollHeight; // Cuộn xuống dưới cùng
+            // Giả lập phản hồi từ chuyên viên
+            setTimeout(() => {
+                chatBox.innerHTML += `<p><strong>Chuyên viên:</strong> Cảm ơn bạn! Để tư vấn tốt hơn, bạn có thể cho tôi biết thêm về tình trạng của bé như cân nặng, chiều cao, tuổi, sở thích và tình trạng ăn uống của bé không?</p>`;
+                chatBox.scrollTop = chatBox.scrollHeight; // Cuộn xuống dưới cùng
+            }, 1000);
+        }
+    }
+</script>
+
+</body>
+</html>
