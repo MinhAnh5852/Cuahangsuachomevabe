@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Hàng</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            text-align: center;
+            margin-bottom: 20px; /* Khoảng cách giữa header và phần phản hồi */
+            padding: 10px; /* Thêm khoảng cách bên trong header */
+            border-radius: 10px; /* Bo góc cho header */
+            width: 100%; /* Đặt chiều rộng cho header */
+        }
+        body {
+            background-color: #f8f9fa; /* Màu nền nhẹ */
+        }
+        .container {
+            background-color: rgb(190, 254, 244); /* Màu nền trắng cho form */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color:rgb(2, 9, 17); /* Màu xanh cho tiêu đề */
+        }
+        nav ul {
+            list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+            padding: 0; /* Bỏ padding */
+        }
+        nav ul li {
+            display: inline; /* Hiển thị các mục trong hàng */
+            margin-right: 15px; /* Khoảng cách giữa các mục */
+        }
+        nav ul li a {
+            text-decoration: none; /* Bỏ gạch chân */
+            color:rgb(1, 7, 13); /* Màu chữ cho liên kết */
+        }
+        nav ul li a:hover {
+            text-decoration: underline; /* Gạch chân khi hover */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cửa Hàng Sữa Cho Mẹ Bầu Và Bé</h1>
+        <nav>
+            <ul>
+                <li><a href="khachhang.html">🏠 Trang Chủ</a></li>
+                <li><a href="donhang.html">Đơn Hàng</a></li>
+                <li><a href="hanghoa.html">Hàng Hóa</a></li>
+                <li><a href="nguoidung.html">Người Dùng</a></li>
+                <li><a href="mavoucher.html">Mã Voucher</a></li>
+                <li><a href="baocao.html">Báo Cáo</a></li>
+                <li><a href="theodoidonhang.html">Theo dõi đơn hàng</a></li>
+                <li><a href="baiviet.html">Bài viết</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container mt-5">
+        <h1 class="text-center">Đặt Hàng</h1>
+        <p class="text-center">Vui lòng điền thông tin bên dưới để đặt hàng.</p>
+
+        <!-- Thông báo thành công -->
+        <div id="success-message" class="alert alert-success d-none" role="alert">
+            Đơn hàng của bạn đã được gửi thành công!
+        </div>
+
+        <form id="order-form" action="" method="POST">
+            <div class="form-group">
+                <label for="name">Họ và Tên:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Số Điện Thoại:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Địa Chỉ Giao Hàng:</label>
+                <textarea class="form-control" id=" address" name="address" rows="3" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="product">Sản Phẩm:</label>
+                <select class="form-control" id="product" name="product" required>
+                    <option value="">Chọn sản phẩm</option>
+                    <option value="product1">Sản phẩm 1</option>
+                    <option value="product2">Sản phẩm 2</option>
+                    <option value="product3">Sản phẩm 3</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Đặt Hàng</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Xử lý sự kiện gửi form
+        document.getElementById('order-form').onsubmit = function(event) {
+            event.preventDefault(); // Ngăn chặn gửi form mặc định
+
+            // Hiển thị thông báo thành công
+            document.getElementById('success-message').classList.remove('d-none');
+
+            // Thực hiện gửi form (có thể sử dụng AJAX hoặc gửi lại trang)
+            // Ở đây, bạn có thể thêm mã để gửi dữ liệu đến server nếu cần
+            // Ví dụ: sử dụng fetch hoặc jQuery AJAX để gửi dữ liệu
+            // fetch('/order/', { method: 'POST', body: new FormData(this) });
+        };
+    </script>
+</body>
+</html>

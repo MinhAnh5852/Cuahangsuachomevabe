@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Danh sách doanh thu</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Danh sách doanh thu</h1>
+    <ul>
+        {% for revenue in revenues %}
+        <li><a href="{% url 'revenue_detail' revenue.id %}">{{ revenue.date }}: {{ revenue.amount }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
