@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sản phẩm Sữa cho Mẹ Bầu và Bé</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e9f5ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #3b972e;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #f40707;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.01);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+        .product {
+            display: flex;
+            margin-bottom: 30px;
+            border: 1px solid #7fd312;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+            background-color: #f9f9f9;
+        }
+        .product:hover {
+            box-shadow: 0 4px 15px rgba(168, 30, 30, 0.2);
+        }
+        .product img {
+            max-width: 150px;
+            object-fit: cover;
+            border-radius: 8px 0 0 8px;
+        }
+        .product-info {
+            flex: 1;
+            padding: 20px;
+        }
+        .product-info h2 {
+            color: #0eaf19;
+            margin: 0 0 10px;
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        .product-info p {
+            color: #0c0c0c;
+            line-height: 1.6;
+        }
+        .price {
+            font-size: 1.5em;
+            color: #d9534f;
+            margin: 10px 0;
+            font-weight: bold;
+        }
+        .buy-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #3b972e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
+            text-align: center;
+        }
+        .buy-button:hover {
+            background-color: #f40707;
+            transform: translateY(-2px);
+        }
+        @media (max-width: 600px) {
+            .product {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product img {
+                margin-bottom: 15px;
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div>
+        <a href="#">Đăng Nhập</a>
+    </div>
+    <div>
+        <a href="#">Trang Chủ</a>
+        <a href="#">Sản Phẩm</a>
+        <a href="#">Giới Thiệu</a>
+        <a href="#">Liên Hệ</a>
+    </div>
+</div>
+
+<div class="container">
+    <h1>Sản phẩm Sữa cho Mẹ Bầu và Bé</h1>
+    <div class="product">
+        <img src="https://cdn-v2.kidsplaza.vn/media/catalog/product/s/u/sua-bau-similac-mom-iq-plus-hop-900g-huong-vani-1.jpg" alt="Sữa cho Mẹ Bầu và Bé">
+        <div class="product-info">
+            <h2>Sữa Bầu Dinh Dưỡng</h2>
+            <p>Được thiết kế đặc biệt cho mẹ bầu, cung cấp đầy đủ vitamin và khoáng chất cần thiết cho sự phát triển của thai nhi.</p>
+            <p class="price">Giá: 500.000 VNĐ</p>
+            <a href="#" class="buy-button">Mua Ngay</a>
+        </div>
+    </div>
+
+    <div class="product">
+        <img src="https://cdn1.concung.com/storage/data/2021/thong-tin-bo-ich/2022/04/sua-similac-5g-so-1-900g-0-6-thang.webp" alt="Sữa cho Bé">
+        <div class="product-info">
+            <h2>Sữa Công Thức cho Bé </h2>
+            <p>Sữa công thức giàu dinh dưỡng, hỗ trợ sự phát triển toàn diện cho trẻ từ 0-12 tháng tuổi.</p>
+            <p class="price">Giá: 350.000 VNĐ</p>
+            <a href="#" class="buy-button">Mua Ngay</a>
+        </div>
+    </div>
+    
+    <div class="product">
+        <img src="https://img.vn.my-best.com/product_images/4274b2b27400038fa8e5bb8030452de5.png?ixlib=rails-4.3.1&q=70&lossless=0&w=800&h=800&fit=clip&s=bc3a8048d6feed55f6823b6be56dd8b6" alt="Sữa cho Bé">
+        <div class="product-info">
+            <h2>Sữa Lốc cho Bé</h2>
+            <p>Sữa lốc giàu dinh dưỡng, hỗ trợ sự phát triển toàn diện cho trẻ từ 12-24 tháng tuổi.</p>
+            <p class="price">Giá: 120.000 VNĐ</p>
+            <a href="#" class="buy-button">Mua Ngay</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

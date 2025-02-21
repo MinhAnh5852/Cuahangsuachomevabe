@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Sữa Cho Mẹ Bầu và Em Bé</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163),#63fcff);
+            color: #000000;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center; /* Căn giữa nav */
+        }
+        nav a {
+            margin: 0 15px;
+            color: #000000;
+            text-decoration: none;
+            font-size: 20px; /* Tăng kích thước chữ cho nav */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .search-bar {
+            margin: 20px 0;
+            text-align: center; /* Căn giữa search-bar */
+        }
+        .search-bar input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #060606;
+            border-radius: 5px;
+            font-size: 16px; /* Tăng kích thước chữ cho ô tìm kiếm */
+        }
+        .search-bar input[type="submit"] {
+            padding: 15px 20px; /* Tăng kích thước nút */
+            background: #f0ab4a; /* Màu nền nút */
+            color: #000000; /* Màu chữ nút */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px; /* Tăng kích thước chữ cho nút */
+        }
+        .search-bar input[type="submit"]:hover {
+            background: #ec0505; /* Màu nền khi hover */
+            color: #000000; /* Màu chữ khi hover */
+        }
+        section {
+            text-align: center; /* Căn giữa nội dung trong các section */
+        }
+        h2 {
+            font-size: 35px; /* Tăng kích thước chữ cho tiêu đề section */
+        }
+        .product, .article, .review {
+            background: #e2f8f8;
+            margin: 20px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            display: inline-block; /* Để căn giữa các sản phẩm và bài viết */
+            width: 300px; /* Đặt chiều rộng cố định cho sản phẩm và bài viết */
+        }
+        .product img, .article img {
+            max-width: 80%;
+            border-radius: 5px;
+        }
+        .product button, .article button {
+            padding: 14px 16px; /* Tăng kích thước nút */
+            background: #f0ab4a; /* Màu nền nút */
+            color: #000000; /* Màu chữ nút */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 22px; /* Tăng kích thước chữ cho nút */
+            margin-top: 8px; /* Khoảng cách trên nút */
+        }
+        .product button:hover, .article button:hover {
+            background: #e32020; /* Màu nền khi hover */
+        }        
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163),#63fcff);
+            color: #000000;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-size: 16px; /* Tăng kích thước chữ cho footer */
+        }
+        .product h3, .article h3, .review h3 {
+            font-size: 25px; /* Tăng kích thước chữ cho tiêu đề sản phẩm, bài viết và đánh giá */
+        }
+        .product p, .article p, .review p {
+            font-size: 20px; /* Tăng kích thước chữ cho nội dung sản phẩm, bài viết và đánh giá */
+ }
+ .review {
+            border: 1px solid #bec3d7;
+            margin: 20px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+        .review h3 {
+            font-size: 24px;
+            color: #000000;
+        }
+        .review p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        .review strong {
+            color: #d32f2f;
+        }
+        .star-rating {
+            color: #FFD700; /* Màu vàng cho sao */
+            font-size: 20px; /* Kích thước sao */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Chào Khách Hàng Đến Với Sữa Cho Mẹ Bầu Và Bé</h1>
+</header>
+
+<nav>
+    <a href="#products">Trang Chủ</a>
+    <a href="#products">Thông Tin</a>
+    <a href="#search">Bài Viết</a>
+    <a href="#products">Sản Phẩm Gợi Ý</a>
+</nav>
+
+<div class="container">
+    <div class="search-bar" id="search">
+        <input type="text" placeholder="Tìm kiếm sản phẩm về sữa...">
+        <input type="submit" value="Tìm Kiếm">
+    </div>
+
+    <section id="products">
+        <h2>Sản Phẩm Về Sữa</h2>
+        <div class="product">
+            <h3> Sữa Công Thức Cho Mẹ Bầu </h3>
+            <img src="https://www.kidsplaza.vn/blog/wp-content/uploads/2022/05/cac-loai-sua-tot-cho-ba-bau.jpg" alt="Sữa Công Thức Dành Cho Mẹ Bầu">
+            <p>Giá: 520.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+        <div class="product">
+            <h3> Sữa Lốc Dành Cho Mẹ Bầu </h3>
+            <img src="https://file.hstatic.net/200000382533/file/sua-bau-matilia_grande.jpg" alt="Sữa Lốc Dành Cho Mẹ Bầu">
+            <p>Giá: 150.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+        <div class="product">
+            <h3> Sữa Gói Dành Cho Mẹ Bầu </h3>
+            <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgz682g20ilucd" alt="Sữa Gói Dành Cho Mẹ Bầu">
+            <p>Giá: 200.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+        <div class="product">
+            <h3> Sữa Lốc 4 Hộp Dành Cho Bé </h3>
+            <img src="https://product.hstatic.net/200000330997/product/thung-48-hop-sua-pha-san-similac-huong-vani-180-ml__4__6ca96e18d9f443b69708da7b5bf69861.png" alt="Sữa Sữa Lốc Dành Cho Bé 2-3 tuổi">
+            <p>Giá: 100.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+        <div class="product">
+            <h3> Sữa Công Thức Dành Cho Bé </h3>
+            <img src="https://product.hstatic.net/200000178477/product/2fc3029974b392e6e25cb87a2d83d5fd_91a17ec5740447c085349fe4961e8550_grande.jpg" alt="Sữa Công Thức Dành Cho Bé 0-12 tháng tuổi">
+            <p>Giá: 490.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+    </section>
+
+    <section id="articles">
+        <h2>Bài Viết Về Chăm Sóc Sức Khỏe</h2>
+        <div class="article">
+            <h3>Chăm Sóc Mẹ Bầu Trong Thai Kỳ</h3>
+            <img src="https://gbh.com.vn/wp-content/uploads/2023/12/Cham-Soc-Toc-Cho-Me-Bau-Lua-Chon-An-Toan-va-Hieu-Qua.jpg" alt="Chăm Sóc Mẹ Bầu">
+            <p>Nội dung bài viết về chăm sóc sức khỏe cho mẹ bầu...</p>
+            <button>Xem Thêm</button>
+        </div>
+        <div class="article">
+            <h3>Chế Độ Dinh Dưỡng Cho Trẻ Nhỏ</h3>
+            <img src="https://nutriancan.com.vn/storage/photos/shares/thumbs/nhung-dieu-can-biet-ve-thap-dinh-duong_10000.jpg" alt="Chế Độ Dinh Dưỡng Cho Trẻ Nhỏ">
+            <p>Nội dung bài viết về chế độ dinh dưỡng cho trẻ nhỏ...</p>
+            <button>Xem Thêm</button>
+        </div>
+    </section>
+
+    <section id="suggestions">
+        <h2> Sản Phẩm Gợi Ý </h2>
+        <div class="product">
+            <h3> Sữa Bột Dinh Dưỡng </h3>
+            <img src="https://nhathuoc365.vn/upload_images/images/si.jpg" alt="Sữa Bột Dinh Dưỡng">
+            <p>Giá: 480.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+        <div class="product">
+            <h3> Sữa Tươi Tiệt Trùng </h3>
+            <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/416/540/products/similac-180ml-2-d159296a-d5b6-4ce0-abbc-8cf2824104c5.jpg?v=1700534755690" alt="Sữa Tươi Tiệt Trùng">
+            <p >Giá: 90.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+        <div class="product">
+            <h3> Sữa Hạt Dinh Dưỡng </h3>
+            <img src="https://product.hstatic.net/200000740871/product/sua-similac-special-care-24-kcal-dsdf_199e02cd59cc47d683f32c188752002d_master.jpg" alt="Sữa Hạt Dinh Dưỡng">
+            <p>Giá: 300.000 VNĐ</p>
+            <button>Mua Ngay</button>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2>Đánh Giá Sản Phẩm</h2>
+        <div class="review">
+            <h3>Sữa Lốc 4 Hộp Dành Cho Bé</h3>
+            <p>Người dùng: <strong>Nguyễn Văn A</strong></p>
+            <p class="star-rating">⭐️⭐️⭐️⭐️</p>
+            <p>Đánh giá: <strong>4/5</strong> - Sữa rất ngon và dễ uống!</p>
+        </div>
+        <div class="review">
+            <h3>Sữa Công Thức Cho Mẹ Bầu</h3>
+            <p>Người dùng: <strong>Nguyễn Thị C</strong></p>
+            <p class="star-rating">⭐️⭐️⭐️⭐️⭐️</p>
+            <p>Đánh giá: <strong>5/5</strong> - Pha rất nhanh, bổ sung đầy đủ các chất dinh dưỡng</p>
+        </div>
+        <div class="review">
+            <h3>Sữa Công Thức Dành Cho Bé</h3>
+            <p>Người dùng: <strong>Trần Thị B</strong></p>
+            <p class="star-rating">⭐️⭐️⭐️⭐️⭐️</p>
+            <p>Đánh giá: <strong>5/5</strong> - Bé nhà mình rất thích!</p>
+        </div>
+    </section>
+</div>
+<footer>
+    <p>©2024 Trang Sữa Cho Mẹ Bầu và Em Bé. Tất cả quyền được bảo lưu.</p>
+</footer>
+</body>
+</html>
