@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Sữa Cho Mẹ Bầu Và Bé</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        header {
+            background-image: linear-gradient(to right, #b0f9b2, #ffe7a3, #63fcff);
+            color: black;
+            padding: 0.5px 0;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+        nav {
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+        nav ul li {
+            margin: 0;
+        }
+        nav ul li a {
+            color: black; /* Đổi màu chữ thành đen */
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s; /* Thêm hiệu ứng chuyển đổi */
+        }
+        nav ul li a:hover {
+            background-color: #0056b3;
+            color: white; /* Đổi màu chữ thành trắng khi hover */
+        }
+        h2 {
+            color: #007bff;
+            text-align: center; /* Căn giữa tiêu đề */
+            margin: 20px 0;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-image: linear-gradient(to right,rgb(15, 203, 22),rgb(201, 150, 10),rgb(9, 135, 137));
+            color: #fff;
+            border-radius: 0 0 8px 8px;
+        }
+        .voucher-form {
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #e9f5ff;
+        }
+        .voucher-form input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+        }
+        .voucher-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Thêm hiệu ứng chuyển đổi */
+        }
+        .voucher-form button:hover {
+            background-color: #0056b3;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap; /* Cho phép sản phẩm xuống dòng */
+            justify-content: space-between; /* Căn đều các sản phẩm */
+            margin: 10px 0;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            width: 48%; /* Chiếm 48% chiều rộng để có khoảng cách giữa các sản phẩm */
+            margin-bottom: 20px; /* Khoảng cách giữa các hàng sản phẩm */
+            background-color: #f9f9f9; /* Màu nền nhẹ cho sản phẩm */
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s; /* Thêm hiệu ứng chuyển đổi */
+        }
+ .product:hover {
+            transform: scale(1.02); /* Hiệu ứng phóng to khi hover */
+        }
+        .product img {
+            width: 100px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .policy {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            background-color: #e9f5ff;
+        }
+        .brand-logo {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .brand-logo img {
+            width: 150px;
+        }
+        .brand-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 10px 0;
+        }
+        .brand-item {
+            margin: 10px;
+            text-align: center;
+        }
+        .brand-item img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Cửa Hàng Sữa Cho Mẹ Bầu Và Bé</h1>
+        <nav>
+            <ul>
+                <li><a href="#voucher">Voucher</a></li>
+                <li><a href="#products">Sản Phẩm</a></li>
+                <li><a href="#policy">Chính Sách</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="brand-logo">
+        <img src="https://img.freepik.com/premium-vector/mothers-day-cute-illustration-mothers-admires-his-son_1062857-266.jpg" alt="Logo Cửa Hàng" />
+    </div>
+
+    <section id="voucher">
+        <h2>Chương Trình Voucher Tích Lũy Điểm</h2>
+        <p>Tham gia chương trình tích lũy điểm thành viên để nhận voucher giảm giá và quà tặng hấp dẫn.</p>
+        <ul>
+            <li>Điểm tích lũy sẽ được cộng dồn mỗi khi bạn mua sắm tại cửa hàng.</li>
+            <li>Sử dụng voucher để giảm giá cho các sản phẩm hoặc đổi quà.</li>
+            <li>Tham gia các sự kiện đặc biệt để nhận thêm điểm thưởng.</li>
+        </ul>
+
+        <div class="voucher-form">
+            <h3>Nhận Mã Voucher</h3>
+            <input type="text" id="name" placeholder="Nhập tên của bạn" required>
+            <input type="text" id="phone" placeholder="Nhập số điện thoại" required>
+            <input type="date" id="dob" placeholder="Ngày/Tháng/Năm sinh" required>
+            <input type="text" id="code" placeholder="Nhập mã voucher" required>
+            <input type="date" id="expiry" placeholder="Chọn thời hạn" required>
+            <button onclick="receiveVoucher()">Nhận Mã Voucher</button>
+        </div>
+    </section>
+
+    <section id="products">
+        <h2>Sản Phẩm Có Thể Đổi Quà</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="https://file.hstatic.net/200000382533/file/sua-bau-matilia_grande.jpg" alt="Sữa Lốc Dành Cho Mẹ Bầu">
+                <div>
+                    <h3>Sữa Lốc Dành Cho Mẹ Bầu</h3>
+                    <p>Giá: 520.000 VNĐ</p>
+                    <p>Điểm đổi: 100 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://mebeplaza.com/wp-content/uploads/2020/09/similac-mom-400g.jpg" alt="Sữa Similac Mom">
+                <div>
+                    <h3>Sữa Similac Mom</h3>
+                    <p>Giá: 250.000 VNĐ</p>
+                    <p>Điểm đổi: 80 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7qukw-lgz682g20ilucd" alt="Sữa Gói Dành Cho Mẹ Bầu">
+                <div>
+                    <h3>Sữa Gói Dành Cho Mẹ Bầu</h3>
+                    <p>Giá: 150.000 VN Đ</p>
+                    <p>Điểm đổi: 50 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://th.bing.com/th/id/OIP.LSvJetFx3uo49V1vtPZeAgHaHa?rs=1&pid=ImgDetMain" alt="Sữa Ensure Gold">
+                <div>
+                    <h3>Sữa Ensure Gold</h3>
+                    <p>Giá: 400.000 VNĐ</p>
+                    <p>Điểm đổi: 120 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://th.bing.com/th/id/OIP.nt3ddNWxjcGYzX7UZvEiTgHaHa?rs=1&pid=ImgDetMain" alt="Sữa Enfagrow Enspire">
+                <div>
+                    <h3>Sữa Enfagrow Enspire</h3>
+                    <p>Giá: 350.000 VNĐ</p>
+                    <p>Điểm đổi: 110 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://nhathuoc365.vn/upload_images/images/Sua-vinamilk-optimum-gold-4-900g.jpg" alt="Sữa Vinamilk Optimum Gold">
+                <div>
+                    <h3>Sữa Vinamilk Optimum Gold</h3>
+                    <p>Giá: 200.000 VNĐ</p>
+                    <p>Điểm đổi: 60 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://concung.com/2022/04/56976-87035-large_mobile/sua-colosbaby-bio-gold-0-800g-0-12-thang.jpg" alt="Sữa Colosbaby Bio Gold">
+                <div>
+                    <h3>Sữa Colosbaby Bio Gold</h3>
+                    <p>Giá: 180.000 VNĐ</p>
+                    <p>Điểm đổi: 40 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://shoptretho.com.vn/upload/image/product/20230615/sua-uong-dielac-grow-plus-xanh-110ml-1.jpg" alt="Sữa uống dinh dưỡng Nutifood GrowPLUS">
+                <div>
+                    <h3>Sữa uống dinh dưỡng Nutifood GrowPLUS</h3>
+                    <p>Giá: 150.000 VNĐ</p>
+                    <p>Điểm đổi: 50 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://th.bing.com/th/id/OIP.XqNcR26tQXNmeCdy3vtvegHaHa?rs=1&pid=ImgDetMain" alt="Sữa tươi tiệt trùng TH true Milk">
+                <div>
+                    <h3>Sữa tươi tiệt trùng TH true Milk</h3>
+                    <p>Giá: 320.000 VNĐ</p>
+                    <p>Điểm đổi: 90 điểm</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://nhathuoc365.vn/upload_images/images/si.jpg" alt="Sữa Similac">
+                <div>
+                    <h3>Sữa Similac</h3>
+                    <p>Giá: 250.000 VNĐ</p>
+                    <p>Điểm đổi: 80 điểm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="policy" id="policy">
+        <h2>Chính Sách Chương Trình</h2>
+        <p>Nội dung chính của Voucher: Tặng ngay 50,000đ, Giảm giá ngay 5% khi mua Combo.</p>
+        <p>Thời gian áp dụng: Từ ngày 01/01/2025 đến 31/12/2025.</p>
+        <p>Quy định sử dụng: Voucher không có giá trị quy đổi thành tiền mặt, chỉ áp dụng cho sản phẩm trong danh sách.</p>
+    </section>
+
+    <section id="brands">
+        <h2>Danh Sách Thương Hiệu Sữa Nổi Tiếng</h2>
+        <div class="brand-list">
+            <div class="brand-item">
+                <img src="https://www.vn.abbott/etc.clientlibs/abbott-platform/clientlibs/clientlib-site/resources/images/abbott-logo.png" alt="Abbott">
+                <p>Abbott (Similac, Ensure)</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://www.moby.com.vn/data/ck/images/logo%20meiji.jpg" alt="Meiji">
+                <p>Meiji</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://cdn.shopify.com/s/files/1/0569/0877/5471/files/Logo_Moi_Khong_Gold_no_flag_Blue-01_01c16a22-1e66-449d-bdde-b6cae36d833e.png?v=1675732933" alt="Friso">
+                <p>Friso</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://static.wikia.nocookie.net/logopedia/images/6/65/Dumex-logo.png/revision/latest?cb=20180603183856" alt="Dumex">
+                <p>Dumex</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://www.nestle.com.vn/sites/g/files/pydnoa216/files/NESTLElogo-with-wordmark-oak-781x800px-RGB.png" alt="Nestlé">
+                <p>Nestlé (Nan, Lactogen)</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://bienquangcaohaiphongblog.wordpress.com/wp-content/uploads/2015/12/nutifood-logo.png" alt="Nutifood">
+                <p>Nutifood</p>
+            </div>
+            <div class="brand-item">
+                <img src="https://upload.wikimedia.org/wikipedia/vi/0/06/Vinamilk_logo.jpg" alt="Vinamilk">
+                <p>Vinamilk</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên Hệ</h2>
+        <p>Để biết thêm thông tin, vui lòng liên hệ với chúng tôi qua:</p>
+        <ul>
+            <li>Email: <a href="mailto:support@cuahangsuamebauvabe.com">support@cuahangsuamebauvabe.com</a></li>
+            <li>Điện thoại: <a href="tel:0123456789">0123-456-789</a></li>
+            <li>Website: <a href="http://www.cuahangsuamebauvabe.com">www.cuahangsuamebauvabe.com</a></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cửa Hàng Sữa Cho Mẹ Bầu Và Bé. Tất cả quyền được bảo lưu.</p>
+    </footer>
+</div>
+
+<script>
+    function receiveVoucher() {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const dob = document.getElementById('dob').value;
+        const code = document.getElementById('code').value;
+        const expiry = document.getElementById('expiry').value;
+
+        if (name && phone && dob && code && expiry) {
+            alert(`Cảm ơn ${name}! Bạn đã nhận mã voucher: ${code} có thời hạn đến ${expiry}.`);
+        } else {
+            alert('Vui lòng điền đầy đủ thông tin.');
+        }
+    }
+</script>
+
+</body>
+</html>

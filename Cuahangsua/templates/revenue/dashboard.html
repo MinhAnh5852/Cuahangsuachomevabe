@@ -1,0 +1,12 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Thống kê doanh thu</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Tổng doanh thu: {{ total_revenue }}</h1>
+    <a href="{% url 'revenue_list' %}">Xem danh sách doanh thu</a>
+</body>
+</html>
