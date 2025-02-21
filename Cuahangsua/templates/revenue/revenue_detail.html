@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chi tiết doanh thu</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Chi tiết doanh thu</h1>
+    <p>Ngày: {{ revenue.date }}</p>
+    <p>Số lượng: {{ revenue.amount }}</p>
+    <p>Miêu tả: {{ revenue.description }}</p>
+</body>
+</html>
