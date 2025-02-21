@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include('Sanpham.urls')),
     path('Doanhthu/', include('Doanhthu.urls')),
     path('Khachhang/', include('Khachhang.urls')),
+    path('app1/', include('app1.urls')),
 ]

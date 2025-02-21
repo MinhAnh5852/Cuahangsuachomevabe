@@ -14,7 +14,7 @@
         }
         header {
             background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163),#63fcff);
-            color: #000000;
+            color:rgb(0, 0, 0);
             padding: 10px 0;
             text-align: center;
         }
@@ -22,8 +22,16 @@
             margin: 20px 0;
             text-align: center; /* Căn giữa nav */
         }
+        nav ul {
+            list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+            padding: 0; /* Bỏ padding */
+            margin: 0; /* Bỏ margin */
+        }
+        nav li {
+            display: inline; /* Hiển thị các phần tử danh sách theo hàng ngang */
+            margin: 0 15px; /* Khoảng cách giữa các liên kết */
+        }
         nav a {
-            margin: 0 15px;
             color: #000000;
             text-decoration: none;
             font-size: 20px; /* Tăng kích thước chữ cho nav */
@@ -104,8 +112,8 @@
         }
         .product p, .article p, .review p {
             font-size: 20px; /* Tăng kích thước chữ cho nội dung sản phẩm, bài viết và đánh giá */
- }
- .review {
+        }
+        .review {
             border: 1px solid #bec3d7;
             margin: 20px;
             padding: 15px;
@@ -132,16 +140,21 @@
 </head>
 <body>
 
-<header>
-    <h1>Chào Khách Hàng Đến Với Sữa Cho Mẹ Bầu Và Bé</h1>
-</header>
-
-<nav>
-    <a href="#products">Trang Chủ</a>
-    <a href="#products">Thông Tin</a>
-    <a href="#search">Bài Viết</a>
-    <a href="#products">Sản Phẩm Gợi Ý</a>
-</nav>
+    <header>
+        <h1>CỬA HÀNG SỮA CHO MẸ BẦU VÀ EM BÉ</h1>
+        <nav>
+            <ul>
+                <li><a href="#trangchu">🏠Trang chủ</a></li>
+                <li><a href="#orders">Đơn hàng</a></li>
+                <li><a href="#products">Hàng hóa</a></li>
+                <li><a href="#users">Người dùng</a></li>
+                <li><a href="#vouchers">Mã Voucher</a></li>
+                <li><a href="#reports">Báo cáo</a></li>
+                <li><a href="#tracking">Theo dõi đơn hàng</a></li>
+                <li><a href="#posts">Tư vấn</a></li>
+            </ul>
+        </nav>
+    </header>
 
 <div class="container">
     <div class="search-bar" id="search">
@@ -243,9 +256,8 @@
         </div>
     </section>
 </div>
-
 <footer>
-    <p>©2024 Trang Sữa Cho Mẹ Bầu và Em Bé. Tất cả quyền được bảo lưu.</p>
+    <p>©2025 Trang Sữa Cho Mẹ Bầu và Em Bé. Tất cả quyền được bảo lưu .</p>
 </footer>
 </body>
 </html>
