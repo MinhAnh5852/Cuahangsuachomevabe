@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa Hàng Cho Mẹ Bầu và Bé</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(249, 249, 249);
+        }
+        header {
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            color: black;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav ul {
+            list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+            padding: 0; /* Bỏ khoảng cách bên trong */
+            display: flex; /* Sử dụng Flexbox để sắp xếp ngang */
+            justify-content: center; /* Căn giữa các mục */
+        }
+        nav a {
+            color: black;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .payment-methods {
+            margin: 20px 0;
+            text-align: center; /* Căn giữa nội dung thanh toán */
+            background-color: #fff; /* Nền trắng cho phần thanh toán */
+            border-radius: 10px; /* Bo góc */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+            padding: 20px; /* Khoảng cách bên trong */
+        }
+        .payment-methods h2 {
+            color: #4CAF50; /* Màu xanh lá cho tiêu đề */
+            margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+        }
+        .payment-method {
+            margin: 20px 0; /* Khoảng cách giữa các phương thức */
+            padding: 15px; /* Khoảng cách bên trong */
+            border: 1px solid #ddd; /* Viền xung quanh */
+            border-radius: 8px; /* Bo góc */
+            background-color: rgb(205, 234, 236); /* Nền xám nhạt */
+        }
+        .payment-method h3 {
+            color: rgb(222, 70, 70); /* Màu cam cho tiêu đề phương thức */
+            font-size: 2em;
+        }
+        .payment-method p, .payment-method ul {
+            text-align: center; /* Căn trái cho văn bản */
+            margin: 5px 0; /* Khoảng cách giữa các đoạn */
+        }
+        .payment-info {
+            display: flex; /* Sử dụng Flexbox */
+            justify-content: center; /* Căn giữa các phần tử */
+            align-items: center; /* Căn chỉnh các phần tử theo giữa */
+            margin-top: 50px; /* Khoảng cách trên */
+            flex-wrap: wrap; /* Cho phép các phần tử xuống dòng nếu cần */
+        }
+        .qr-code {
+            text-align: center; /* Căn giữa mã QR */
+            margin: 0 20px; /* Khoảng cách bên trái và bên phải cho mã QR */
+        }
+        .info {
+            flex: 1; /* Chiếm không gian còn lại */
+            max-width: 400px; /* Giới hạn chiều rộng của thông tin */
+            margin: 0 20px; /* Khoảng cách bên trái và bên phải cho thông tin */
+        }
+        .qr-code img {
+            max-width: 250px; /* Giảm kích thước mã QR */
+            height: auto; /* Đảm bảo hình ảnh không bị méo */
+        }
+        footer {
+            text-align: center; /* Căn giữa nội dung footer */
+            padding: 20px; /* Khoảng cách bên trong */
+            background-image: linear-gradient(to right, rgb(176, 249, 134), rgb(255, 231, 163), #63fcff);
+            border-top: 1px solid #ddd; /* Viền trên cho footer */
+            margin-top: 20px; /* Khoảng cách trên footer */
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho footer */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Quản lý Cửa hàng Sữa cho Mẹ Bầu và Em Bé</h1>
+        <nav>
+            <ul>
+                <li><a href="#orders">🏠 Trang chủ </a></li>
+                <li><a href="#orders">Đơn hàng</a></li>
+                <li><a href="#products">Hàng hóa</a></li>
+                <li><a href="#users">Người dùng</a></li>
+                <li><a href="#vouchers">Mã Voucher</a></li>
+                <li><a href="#reports">Báo cáo</a></li>
+                <li><a href="#tracking">Theo dõi đơn hàng</a></li>
+                <li><a href="#posts">Bài viết</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h2 style="text-align: center;">Phương Thức Thanh Toán</h2>
+<div class="payment-methods">
+    <div class="payment-method">
+        <h3>Chuyển Khoản Ngân Hàng</h3>
+        <p>Vui lòng chuyển khoản vào tài khoản ngân hàng sau:</p>
+        <p><strong>Tên tài khoản:</strong> Cửa Hàng Mẹ Bầu và Bé</p>
+        <p><strong>Số tài khoản:</strong> 0334327457</p>
+        <p><strong>Ngân hàng:</strong> Ngân Hàng MB</p>
+    </div>
+
+    <div class="payment-method">
+        <h3>Thanh Toán Trực Tuyến</h3>
+        <p>Chúng tôi hỗ trợ thanh toán qua các cổng thanh toán trực tuyến như:</p>
+        <ul>
+            <li>Ví điện tử Momo</li>
+            <li>Ví điện tử ZaloPay</li>
+            <li>Thẻ tín dụng (Visa, MasterCard)</li>
+        </ul>
+    </div>
+
+    <div class="payment-info">
+        <div class="qr-code">
+            <h3>Quét Mã QR Để Thanh Toán</h3>
+            <img src="https://i.imgur.com/4R2QWa6.jpeg" alt="Mã QR Thanh Toán">
+        </div>
+        <div class="info">
+            <p>Vui lòng quét mã QR để thực hiện thanh toán nhanh chóng và dễ dàng.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 20255 Cửa Hàng Mẹ Bầu và Bé. Tất cả quyền được bảo lưu.</p>
+</footer>
+</body>
+</html>
